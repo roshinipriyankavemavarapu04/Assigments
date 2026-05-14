@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-# Create a list of 5 favorite movies and print them using a loop.
-n =['hasyam','chalo','fighter','rangam','santhosham']
-for i in n:
-    print(i)
-=======
 # Write a function that returns the square of a number.
 def squ(n):
     print(n*n)
@@ -21,4 +15,3 @@ def avg_f(l,m,n):
 avg_f(1,2,3)
 # Add proper doc string to one function
 
->>>>>>> 7ae13db9cccff231c32d32948de0759dfb4d6237
