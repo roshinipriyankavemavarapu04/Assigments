@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+<h2>Simple Calculator</h2>
+<input type ="number" id="num1" placeholder = "enter first number">
+<input type="number" id ="num2" placeholder="enter second number">
+<button onclick = "calculate()">Add</button>
+
+<h3 id="result"></h3>
+
+<script>
+    async function calculate(){
+        let a = document.getElementById("num1").value;
+        let b = document.getElementById("num2").value;
+
+        let response = await fetch(`http://127.0.0.1:8000/add?a=${a}&b=${b}`)
+        let data = await response.json();
+
+        document.getElementById("result").innerText = "Result:" + data.result;
+    
+    }
+</script>
+
+</body>
+</html>
