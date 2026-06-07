@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="name" placeholder="Enter name">
+    <input id ="age" placeholder="Enter age">
+    <button onclick="submitdata()">Submit</button>
+    <script>
+        async function submitdata(){
+            let name = document.getElementById("name").value;
+            let age = document.getElementById("age").value;
+
+            let response = await fetch("http://127.0.0.1:8000/user",{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body: JSON.stringify({
+                    name:name,
+                    age:Number(age)
+                })
+            });
+            let data = await response.json();
+            alert(data.message);
+        }
+    </script>
+</body>
+</html>
