@@ -1,0 +1,8 @@
+Modules.
+
+1.modules are like code blocks that are used to export and. or import functions and values.
+2.The require() function is used to import modules into a file.
+3. utility modules are the helper functions 
+utility functions are small helper files that contain reusable functions and u can use anywhere in the function.
+
+props are used for reusablility and dynamic rendering.
